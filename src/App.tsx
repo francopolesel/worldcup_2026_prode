@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { usePredictions } from './context/PredictionsContext';
 import { useI18n } from './context/I18nContext';
 import UsernameModal from './components/UsernameModal';
 import GroupStage from './components/GroupStage';
+import KnockoutStage from './components/KnockoutStage';
 import ShareButton from './components/ShareButton';
 import ThemeToggle from './components/ThemeToggle';
 import LanguageToggle from './components/LanguageToggle';
@@ -82,11 +83,3 @@ export default function App() {
   );
 }
 
-// Lazy placeholder — will be replaced by the actual KnockoutStage component
-function KnockoutStage() {
-  const [comp, setComp] = React.useState<React.ReactNode>(null);
-  useEffect(() => {
-    import('./components/KnockoutStage').then(m => setComp(React.createElement(m.default)));
-  }, []);
-  return comp || <div className="text-center py-12 text-gray-400">Loading...</div>;
-}
