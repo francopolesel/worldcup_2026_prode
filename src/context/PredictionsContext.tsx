@@ -15,7 +15,13 @@ interface PredictionsContextType {
 
 const PredictionsContext = createContext<PredictionsContextType | null>(null);
 
-export function PredictionsProvider({ children }: { children: ReactNode }) {
+export function PredictionsProvider({
+  children,
+  confirmResetMessage = '¿Estás seguro? Se borrarán todos tus pronósticos.',
+}: {
+  children: ReactNode;
+  confirmResetMessage?: string;
+}) {
   // Initialize from localStorage first (persists across sessions without URL sharing)
   const savedState = getStateFromLocalStorage();
   
@@ -53,7 +59,7 @@ export function PredictionsProvider({ children }: { children: ReactNode }) {
   }, [predictions]);
 
   const resetAll = useCallback(() => {
-    if (window.confirm('¿Estás seguro? Se borrarán todos tus pronósticos.')) {
+    if (window.confirm(confirmResetMessage)) {
       setUsernameState('');
       setPredictions({});
       setHasUnsavedChanges(false);

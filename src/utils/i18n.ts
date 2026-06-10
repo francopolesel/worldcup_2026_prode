@@ -10,6 +10,10 @@ const translations: TranslationDict = {
     en: 'Predict every World Cup match',
   },
   'app.reset': { es: 'Reiniciar', en: 'Reset' },
+  'app.reset.confirm': {
+    es: '¿Estás seguro? Se borrarán todos tus pronósticos.',
+    en: 'Are you sure? All predictions will be deleted.',
+  },
   'app.loading': { es: 'Cargando...', en: 'Loading...' },
 
   // Username
