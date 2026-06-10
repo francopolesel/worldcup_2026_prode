@@ -9,6 +9,8 @@ const translations: TranslationDict = {
     es: 'Pronosticá todos los partidos del Mundial',
     en: 'Predict every World Cup match',
   },
+  'app.reset': { es: 'Reiniciar', en: 'Reset' },
+  'app.loading': { es: 'Cargando...', en: 'Loading...' },
 
   // Username
   'username.placeholder': { es: 'Tu nombre', en: 'Your name' },
@@ -35,6 +37,10 @@ const translations: TranslationDict = {
 
   // Knockout
   'knockout.title': { es: 'Fase Eliminatoria', en: 'Knockout Stage' },
+  'knockout.no.matches': {
+    es: 'Primero pronosticá la fase de grupos',
+    en: 'Predict group stage first',
+  },
   'knockout.r32': { es: 'Dieciseisavos de Final', en: 'Round of 32' },
   'knockout.r16': { es: 'Octavos de Final', en: 'Round of 16' },
   'knockout.qf': { es: 'Cuartos de Final', en: 'Quarter-finals' },
@@ -50,6 +56,8 @@ const translations: TranslationDict = {
   'match.score': { es: 'Goles', en: 'Goals' },
   'match.penalties': { es: 'Penales', en: 'Penalties' },
   'match.penalty.winner': { es: 'Ganador por penales', en: 'Penalty winner' },
+  'match.penalty.home': { es: 'Local gana por penales', en: 'Home wins on pens' },
+  'match.penalty.away': { es: 'Visitante gana por penales', en: 'Away wins on pens' },
   'match.select.winner': { es: 'Seleccioná quién avanza', en: 'Select who advances' },
   'match.prediction.required': { es: 'Completá el resultado', en: 'Enter the score' },
 
@@ -78,6 +86,10 @@ const translations: TranslationDict = {
   'validation.select.penalty': {
     es: 'Seleccioná el ganador por penales',
     en: 'Select penalty winner',
+  },
+  'validation.name.required': {
+    es: 'Por favor ingresá tu nombre',
+    en: 'Please enter your name',
   },
 };
 

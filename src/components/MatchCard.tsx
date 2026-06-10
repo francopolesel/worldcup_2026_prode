@@ -40,8 +40,8 @@ export default function MatchCard({ match }: MatchCardProps) {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md transition-shadow">
-      <div className="flex items-center justify-between gap-3">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-3 sm:p-4 hover:shadow-md transition-shadow">
+      <div className="flex items-center justify-between gap-2 sm:gap-3">
         {/* Home team */}
         <div className="flex-1 text-right">
           <span className="text-2xl mr-1">{home?.flag}</span>
@@ -92,7 +92,7 @@ export default function MatchCard({ match }: MatchCardProps) {
           <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 text-center">
             {t('match.penalty.winner')}
           </p>
-          <div className="flex gap-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             {[match.homeTeamId, match.awayTeamId].map(teamId => {
               const team = teams.find(t => t.id === teamId);
               const selected = pred?.penaltyWinner === teamId;

@@ -67,7 +67,7 @@ export default function KnockoutBracket() {
       <div className="space-y-3">
         {currentMatches.length === 0 ? (
           <p className="text-center text-gray-400 dark:text-gray-500 py-8">
-            {t('status.missing', { n: 0 })}
+            {t('knockout.no.matches')}
           </p>
         ) : (
           currentMatches.map(match => (

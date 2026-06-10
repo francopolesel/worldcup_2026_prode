@@ -40,7 +40,7 @@ export default function BracketMatch({ match, matchId }: BracketMatchProps) {
   const isAwayWinner = match.winner && match.winner === match.awayTeamId;
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2.5 min-w-[180px] shadow-sm">
+    <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2.5 w-full sm:min-w-[220px] shadow-sm">
       {/* Home team */}
       <div className={`flex items-center justify-between py-1 ${isHomeWinner ? 'bg-green-50 dark:bg-green-900/20 -mx-2.5 px-2.5 rounded-t-lg' : ''}`}>
         <div className="flex items-center gap-1.5 min-w-0 flex-1">

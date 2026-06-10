@@ -14,7 +14,7 @@ export default function UsernameModal() {
     e.preventDefault();
     const trimmed = name.trim();
     if (!trimmed) {
-      setError('Por favor ingresá tu nombre / Please enter your name');
+      setError(t('validation.name.required'));
       return;
     }
     setUsername(trimmed);

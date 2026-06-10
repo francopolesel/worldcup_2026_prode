@@ -40,9 +40,9 @@ export default function GroupTable({ standings, groupLetter }: GroupTableProps) 
                   key={s.teamId}
                   className={`border-b border-gray-100 dark:border-gray-700/50 ${
                     isTopTwo
-                      ? 'bg-green-50 dark:bg-green-900/20'
+                      ? 'border-l-4 border-l-green-500 dark:border-l-green-400 bg-green-50 dark:bg-green-900/20'
                       : s.position === 3
-                      ? 'bg-yellow-50 dark:bg-yellow-900/10'
+                      ? 'border-l-4 border-l-yellow-400 dark:border-l-yellow-500 bg-yellow-50 dark:bg-yellow-900/10'
                       : ''
                   }`}
                 >

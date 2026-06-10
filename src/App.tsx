@@ -21,7 +21,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       {/* Header */}
       <header className="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 py-3">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -38,7 +38,7 @@ export default function App() {
               <button
                 onClick={resetAll}
                 className="text-xs text-gray-400 dark:text-gray-500 hover:text-red-500 dark:hover:text-red-400 transition-colors px-2 py-1"
-                title="Reset"
+                title={t('app.reset')}
               >
                 ✕
               </button>
