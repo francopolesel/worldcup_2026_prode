@@ -1,10 +1,19 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import App from './App';
+import './index.css';
+import { PredictionsProvider } from './context/PredictionsContext';
+import { ThemeProvider } from './context/ThemeContext';
+import { I18nProvider } from './context/I18nContext';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <ThemeProvider>
+      <I18nProvider>
+        <PredictionsProvider>
+          <App />
+        </PredictionsProvider>
+      </I18nProvider>
+    </ThemeProvider>
+  </React.StrictMode>,
 );
